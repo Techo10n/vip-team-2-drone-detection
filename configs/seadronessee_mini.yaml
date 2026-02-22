@@ -1,0 +1,13 @@
+# Mini dataset for CPU sanity testing
+path: data/seadronessee_mini
+train: images/train
+val: images/val
+
+nc: 6
+names:
+  0: none
+  1: swimmer
+  2: boat
+  3: jetski
+  4: buoy
+  5: life_saving_appliances
