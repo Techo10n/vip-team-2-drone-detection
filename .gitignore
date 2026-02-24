@@ -3,3 +3,9 @@ data/
 
 #training runs
 runs/
+
+#other
+create_colab_notebook.py
+fix_notebook.py
+evaluate.py
+inference.py

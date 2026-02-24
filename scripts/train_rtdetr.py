@@ -23,7 +23,7 @@ def main():
     if args.test:
         device = 'cpu'
         data_config = 'configs/seadronessee_mini.yaml'
-        epochs = 2
+        epochs = 10
         batch = 2
         name = 'cpu_sanity_test'
         print('=== CPU SANITY TEST MODE ===')
@@ -50,8 +50,8 @@ def main():
     results = model.train(
         data=data_config,
         epochs=epochs,
-        imgsz=640,
-        batch=batch,
+        imgsz=1280,          # Increased resolution for small objects
+        batch=2,             # Reduced to fit VRAM at higher imgsz
         device=device,
         amp=False,           # IMPORTANT: Disable for RT-DETR stability
         patience=20,         # Early stopping (ignored in 2-epoch test)
@@ -65,6 +65,8 @@ def main():
         lrf=0.01,
         warmup_epochs=3,
         cos_lr=True,
+        mixup=0.0,           # Disable mixup (destructive for small objects)
+        copy_paste=0.0,      # Disable copy-paste for safety with small objs
         workers=4 if args.test else 8,
         exist_ok=True,
     )

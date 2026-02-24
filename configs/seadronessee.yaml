@@ -1,6 +1,6 @@
 # SeaDronesSee Object Detection v2 Dataset Configuration
 
-path: data/seadronessee    # Root directory of the dataset
+path: data/seadronessee         # Root directory of the dataset
 train: images/train        # Training images (relative to path)
 val: images/val            # Validation images (relative to path)
 
@@ -13,5 +13,5 @@ names:
   1: swimmer
   2: boat
   3: jetski
-  4: buoy
-  5: life_saving_appliances
+  4: life_saving_appliances
+  5: buoy
