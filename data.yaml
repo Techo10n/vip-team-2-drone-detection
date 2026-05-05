@@ -1,0 +1,5 @@
+train: images_water/train
+val: images_water/val
+
+nc: 1               # number of classes
+names: ['human']    # class 0 = human
